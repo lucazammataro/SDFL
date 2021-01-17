@@ -153,7 +153,6 @@ def InitAccels():
         mol[n].ra = np.zeros(mol[n].ra.shape)
 
 
-# In[6]:
 
 
 # Set parameters
@@ -182,8 +181,6 @@ def SetupJob():
     InitAccels()
     AccumProps(0)
 
-
-# In[7]:
 
 
 # FORCES COMPUTATION
@@ -247,10 +244,6 @@ def ComputeForces():
                 virSum += fcVal * rr
                 
 
-
-# In[8]:
-
-
 # INTEGRATION
 '''
 INTEGRATION OF COORDINATES AND VELOCITIES.
@@ -276,8 +269,6 @@ def LeapfrogStep(part):
         for n in range(nMol):
             mol[n].rv = np.add(mol[n].rv, np.multiply(0.5 * deltaT, mol[n].ra))                        
 
-
-# In[9]:
 
 
 # PROPERTIES MEASUREMENTS
@@ -343,8 +334,6 @@ def AccumProps(icode):
         PropAvg(uEnergy, stepAvg)
         PropAvg(pressure, stepAvg) 
 
-
-# In[10]:
 
 
 # OUTPUT FUNCTIONS:
@@ -531,8 +520,6 @@ def GraphOutput():
     plt.savefig('systemParams.jpg', dpi=300)
 
 
-# In[11]:
-
 
 # HANDLING FUNCTION (SingleStep())
 '''
@@ -564,8 +551,6 @@ def SingleStep():
         AccumProps(0) # Set to zero all the properties.
 
 
-# In[12]:
-
 
 def loadLogicPattern(pat):
     # assign pattern values
@@ -584,8 +569,6 @@ def loadLogicPattern(pat):
     mol[O_pos].rv = np.array([np.float64(df_params.loc[df_params['parameter']=='pattern'].values[pat][1].split(' ')[2]), -np.float64(df_params.loc[df_params['parameter']=='pattern'].values[pat][1].split(' ')[2])])
     
 
-
-# In[13]:
 
 
 def loadLogicQuery():
@@ -608,8 +591,6 @@ def loadLogicQuery():
 
     
     
-
-
 # MAIN LOOP
 
 #LJ VARIABLES INITIALIZATION
