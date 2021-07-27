@@ -3,6 +3,18 @@ SOFT-DISKS FLUID LEARNING
 
 AUTHOR: LUCA ZAMMATARO, 2020
 
+DESCRIPTION: 
+This work is based on the Equivalence between Molecular Dynamics and Neural Network. It provides
+learning proofs in a Lennard-Jones (LJ) fluid, presented as a network of particles having non-bonded interactions. I
+describe the fluid's learning as the property of an order that emerges as an adaptation in establishing equilibrium with
+energy and thermal conservation. The experimental section demonstrates the fluid can be trained with logic-gates
+patterns. The work goes beyond Molecular Computing's application, explaining how this model uses its intrinsic
+minimizing properties in learning and predicting outputs. Finally, it gives hints for a theory on real chemistry's
+computational universality.
+
+LICENSE:
+Copyright (c) 2020 Luca Zammataro
+
 Usage: python LJSDF.py <training/testing file>
 
 I.e.:  python LJSDF.py AND.txt
