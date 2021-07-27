@@ -25,7 +25,8 @@ To "training" the algorithm with a logic-gate, use as argument one of the text f
 To "testing" a logic-gate, copy the 3 weights files (weights.r, weights.rv, and weights.ra) from the logic-gate directory you want to test, into the same position where you're launching the python script. Use as argument one of the text files into the LOGIC_PATTERNS directories.
 
 The code is described in:
-Luca Zammataro,
+
 Molecular Learning of a Soft-Disks Fluid
-https://www.biorxiv.org/content/10.1101/2021.07.24.453642v1
+Luca Zammataro
+bioRxiv 2021.07.24.453642; doi: https://doi.org/10.1101/2021.07.24.453642
 
