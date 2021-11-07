@@ -1,7 +1,7 @@
 # SDFL
 SOFT-DISKS FLUID LEARNING
 
-AUTHOR: LUCA ZAMMATARO, 2020
+AUTHOR: LUCA ZAMMATARO
 
 DESCRIPTION: 
 This work is based on the Equivalence between Molecular Dynamics and Neural Network. It provides
@@ -12,8 +12,7 @@ patterns. The work goes beyond Molecular Computing's application, explaining how
 minimizing properties in learning and predicting outputs. Finally, it gives hints for a theory on real chemistry's
 computational universality.
 
-LICENSE:
-Copyright (c) 2020 Luca Zammataro
+LICENSE: BSD 3-Clause License
 
 Usage: python LJSDF.py <training/testing file>
 
