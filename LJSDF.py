@@ -775,21 +775,21 @@ if(df_params.loc[df_params['parameter']=='mode'].values[0][1]=='training'):
             loadLogicPattern(p)
             SingleStep()
             PrintSummary()
-            if mov=='yes':
-                plotMol('coo', workdir, n) # Make a graph of the coordinates
-
-
-            if stepCount >= stepLimit:
-                stepCount = 0
-                p = p + 1
-                #if p >= 4:
-                if p >= 1:                
-                    moreCycles = 0
-
+            
             print('\tTRAINING: '+sys.argv[1]+' ITE:'+str(i)+' PAT:'+str(p)+' IM:'+str(n)+' SC:'+str(stepCount)+' SL:'+str(int(stepLimit))+\
                 ' A:'+str(np.round(mol[int(df_params.loc[df_params['parameter']=='A_pos'].values[0][1])].rv, 2)),\
                 ' B:'+str(np.round(mol[int(df_params.loc[df_params['parameter']=='B_pos'].values[0][1])].rv, 2)),\
                 ' O:'+str(np.round(mol[int(df_params.loc[df_params['parameter']=='O_pos'].values[0][1])].rv, 2)))
+            
+            if mov=='yes':
+                plotMol('coo', workdir, n) # Make a graph of the coordinates
+
+            if stepCount >= stepLimit:
+                stepCount = 0
+                p = p + 1
+                if p >= 4:
+                    moreCycles = 0
+
             n += 1
 
     columns = ['timestep','timeNow', '$\Sigma v$', 'E', '$\sigma E$', 'Ek', '$\sigma Ek$', 'Ep', '$\sigma Ep$', 'P_1', 'P_2']
